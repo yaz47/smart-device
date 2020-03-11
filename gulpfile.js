@@ -76,7 +76,9 @@ gulp.task("sprite", function () {
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(posthtml([
-      include()
+      include({
+        root: './build/'
+      })
     ]))
     .pipe(gulp.dest("build"));
 });

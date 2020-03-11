@@ -22,3 +22,39 @@
   text-decoration: none;
   color: inherit;
 }
+
+@mixin font-pt() {
+  font-style: normal;
+  font-weight: 400;
+  font-family: $font-pt;
+}
+
+@mixin font-roboto-regular() {
+  font-style: normal;
+  font-weight: 400;
+  font-family: $font-roboto;
+}
+
+@mixin font-roboto-bold() {
+  font-style: normal;
+  font-weight: 700;
+  font-family: $font-roboto;
+}
+
+@mixin hover-desktop {
+  @media (min-width: $min-desktop-width) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin default-hover-effect() {
+  @include hover-desktop {
+    opacity: $default-opacity-hover;
+  }
+
+  &:active {
+    opacity: $default-opacity-active;
+  }
+}

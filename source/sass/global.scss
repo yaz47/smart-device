@@ -13,6 +13,10 @@ a {
   @include reset-link();
 }
 
+ul {
+  @include reset-list();
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -26,7 +30,6 @@ body {
 
 .visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -38,4 +41,58 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.section-block {
+  position: relative;
+  overflow: hidden;
+  padding-top: 1px;
+  padding-right: 40px;
+  padding-bottom: 1px;
+  padding-left: 40px;
+
+  @media (max-width: $max-tablet-width) {
+    padding-top: 1px;
+    padding-right: 24px;
+    padding-bottom: 1px;
+    padding-left: 24px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-top: 1px;
+    padding-right: 14px;
+    padding-bottom: 1px;
+    padding-left: 14px;
+  }
+}
+
+.container {
+  position: relative;
+  max-width: 1415px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.button {
+  @include reset-button();
+  @include font-roboto-bold();
+  @include default-hover-effect();
+
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  transition: all $default-transition-time $default-transition-func;
+  min-height: 45px;
+  min-width: 100px;
+  padding: 14px 25px;
+
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+
+  border: 1px solid $color-white;
+  border-radius: 5px;
+  background-color: transparent;
 }
