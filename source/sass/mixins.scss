@@ -1,0 +1,24 @@
+@mixin reset-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-button() {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  user-select: none;
+  font-family: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  font-size: inherit;
+}
+
+@mixin reset-link() {
+  text-decoration: none;
+  color: inherit;
+}

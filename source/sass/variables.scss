@@ -1,0 +1,27 @@
+// fonts
+/* stylelint-disable-next-line value-keyword-case */
+$fallback-font: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-pt: "PT Mono", $fallback-font;
+$font-roboto: "Roboto Condensed", $fallback-font;
+
+//breakpoints
+$min-mobile-width: 320px;
+$max-mobile-width: 767px;
+$min-tablet-width: 768px;
+$max-tablet-width: 1023px;
+$min-desktop-width: 1024px;
+
+//pixel density
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// colors
+$black: #000000;
+$white: #ffffff;
+$dark: #666666;
+
+$default-text-color: $grey--dark;
+$title-text-color: $black;
+$inverse-text-color: $white;
+
+$default-bg-color: $white;
