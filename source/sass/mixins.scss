@@ -50,6 +50,8 @@
 }
 
 @mixin default-hover-effect() {
+  transition: opacity $default-transition-time $default-transition-func;
+
   @include hover-desktop {
     opacity: $default-opacity-hover;
   }
