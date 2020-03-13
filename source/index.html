@@ -18,7 +18,19 @@
     <include src="img/sprite_auto.svg"></include>
   </div>
 
-  <header class="header"></header>
+  <header class="header section-block">
+    <div class="header__container container">
+      <a class="header__logo" aria-label="На главную">
+        <picture>
+          <source type="image/webp" srcset="img/footer-logo.webp">
+          <img src="img/header-logo.png" width="216" height="52" alt="Лого">
+        </picture>
+      </a>
+      <a class="header__link header__link--mail" href="mailto:info@sd.ru">info@sd.ru</a>
+      <a class="header__link header__link--phone" href="tel:+74950005252">+7 (495) 000 52 52</a>
+      <a class="header__button button" href="#">Заказать звонок</a>
+    </div>
+  </header>
 
   <main>
     <h1 class="visually-hidden">Smart Device - умные технологии</h1>
@@ -125,7 +137,75 @@
     </section>
   </main>
 
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="footer__block-one">
+      <a class="footer__logo" aria-label="На главную">
+        <picture>
+          <source type="image/webp" srcset="img/footer-logo.webp">
+          <img src="img/footer-logo.png" width="216" height="52" alt="Лого">
+        </picture>
+      </a>
+      <p class="footer__text">1999-2018 SD Service Devices</p>
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
+          <a class="footer__social-button" href="#" aria-label="Фейсбук">
+            <svg class="footer__social-icon" width="27" height="27" aria-hidden="true">
+              <use xlink:href="#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-button" href="#" aria-label="Одноклассники">
+            <svg class="footer__social-icon" width="27" height="27" aria-hidden="true">
+              <use xlink:href="#icon-ok"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-button" href="#" aria-label="В контакте">
+            <svg class="footer__social-icon" width="27" height="27" aria-hidden="true">
+              <use xlink:href="#icon-vk"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__block-two">
+      <button class="footer__toggle" type="button" aria-label="Раскрыть меню"></button>
+      <h2 class="footer__title">Разделы сайта</h2>
+      <div class="footer__menu">
+        <div class="footer__column">
+          <a class="footer__nav-link" href="#">О компании</a>
+          <a class="footer__nav-link" href="#">Продукты</a>
+          <a class="footer__nav-link" href="#">Производство печатных плат</a>
+          <a class="footer__nav-link" href="#">Монтаж печатных плат</a>
+        </div>
+        <div class="footer__column">
+          <a class="footer__nav-link" href="#">Комплектующие</a>
+          <a class="footer__nav-link" href="#">Доставка</a>
+          <a class="footer__nav-link" href="#">Контакты</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__block-three">
+      <button class="footer__toggle" type="button" aria-label="Раскрыть меню"></button>
+      <h2 class="footer__title">Наш офис</h2>
+      <div class="footer__menu">
+        <address class="footer__address">
+          г. Мытищи, Олимпийский проспект, д.10<br>
+          +7 (495) 589-40-50<br>
+          +7 (925) 003-87-67<br>
+          +7 (926) 926-080-79
+        </address>
+      </div>
+    </div>
+    <div class="footer__block-four">
+      <p class="footer__text">Все права защищены</p>
+      <p class="footer__text">1999-2018 SD Service Devices</p>
+      <a class="footer__link" href="#">Условия конфиденциальности</a>
+      <a class="footer__dev" href="#">Developed by wow studio</a>
+    </div>
+  </footer>
 
   <div class="modal"></div>
 
