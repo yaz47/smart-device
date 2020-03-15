@@ -232,7 +232,36 @@
     </div>
   </footer>
 
-  <div class="modal"></div>
+  <div class="modal modal--hide">
+    <section class="modal-call modal__section modal__section--zoom-in">
+      <button class="modal-call__close" type="button" aria-label="Закрыть попап"></button>
+      <h2 class="modal-call__title">Закажите звонок</h2>
+      <p class="modal-call__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <div class="modal-call__form-wrapper">
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="POST" enctype="multipart/form-data" autocomplete="off">
+          <div class="feedback-form__field">
+            <label class="visually-hidden" for="modal-name">Имя</label>
+            <input type="text" name="name" id="modal-name" placeholder="Имя" required="">
+          </div>
+          <div class="feedback-form__field">
+            <label class="visually-hidden" for="modal-phone">Телефон</label>
+            <input type="text" name="phone" id="modal-phone" placeholder="Телефон" required="">
+          </div>
+          <div class="feedback-form__field">
+            <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
+            <textarea name="question" id="modal-question" placeholder="Ваш вопрос" rows="4" required=""></textarea>
+          </div>
+          <div class="feedback-form__field">
+            <button type="submit">Отправить</button>
+          </div>
+          <div class="feedback-form__field">
+            <input class="visually-hidden" type="checkbox" name="info" id="modal-info" checked="" required="">
+            <label for="modal-info">Я согласен на обработку персональных данных</label>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
 
   <script src="js/script.js"></script>
 
