@@ -4,9 +4,13 @@
   box-sizing: border-box;
 }
 
-.html {
+html {
   position: relative;
   font-size: 100%;
+
+  @media (min-width: $min-desktop-width) {
+    scroll-behavior: smooth;
+  }
 }
 
 a {
