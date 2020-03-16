@@ -45,6 +45,12 @@ body {
   overflow: hidden;
 }
 
+.body-lock {
+  position: fixed;
+  width: 100vw;
+  overflow-y: scroll;
+}
+
 .section-block {
   position: relative;
   overflow: hidden;

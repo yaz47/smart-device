@@ -23,6 +23,7 @@ gulp.task("css", function () {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([ autoprefixer() ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -102,9 +103,11 @@ gulp.task("clean", function () {
 
 gulp.task("js-vendors", function () {
   return gulp.src([
-    "source/js/vendors/i-mask.js"
+    "source/js/vendors/smooth-scroll.js",
+    "source/js/vendors/i-mask.js",
+    "source/js/vendors/focus-trap.js"
   ])
-  .pipe(concat("vendors.js"))
+  .pipe(concat("vendor.js"))
   .pipe(gulp.dest("build/js"));
 });
 
@@ -115,7 +118,7 @@ gulp.task("js-app", function () {
     "source/js/app/modal.js",
     "source/js/app/app.js"
   ])
-  .pipe(concat("app.js"))
+  .pipe(concat("main.js"))
   .pipe(gulp.dest("build/js"));
 });
 

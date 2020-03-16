@@ -1,7 +1,9 @@
 'use strict';
 
 (function () {
-  function BaseComponent() {}
+  function BaseComponent(options) {
+    this.element = options.element;
+  }
 
   BaseComponent.prototype._addListener = function (elem, eventName, cb, options) {
     if (typeof options === 'undefined') {
