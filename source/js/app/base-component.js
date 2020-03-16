@@ -57,4 +57,5 @@
   };
 
   window.BaseComponent = BaseComponent;
+  window.BaseComponent.getRefs = BaseComponent.prototype._getRefs;
 })();

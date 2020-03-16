@@ -54,9 +54,9 @@
         <div class="intro__wrapper">
           <h2 class="intro__title">Печатные платы</h2>
           <p class="intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a class="intro__button button" href="#feedback">Получить бесплатную консультацию</a>
+          <a class="intro__button button" href="#feedback" data-init="scroll" data-scroll-id="feedback">Получить бесплатную консультацию</a>
         </div>
-        <a href="#advantages" class="intro__scroll">Скролл вниз</a>
+        <a href="#advantages" class="intro__scroll" data-init="scroll" data-scroll-id="advantages">Скролл вниз</a>
       </div>
     </section>
     <section class="about section-block" id="advantages">
@@ -129,7 +129,7 @@
                 </div>
                 <div class="feedback-form__field">
                   <label class="visually-hidden" for="phone">Телефон</label>
-                  <input type="text" name="phone" id="phone" placeholder="Телефон" required>
+                  <input type="text" name="phone" id="phone" placeholder="Телефон" required data-init="mask">
                 </div>
               </div>
               <div class="feedback-form__field">
@@ -188,7 +188,7 @@
           </ul>
         </div>
         <div class="footer__block-two">
-          <div class="footer__column-one footer__menu-wrapper footer__menu-wrapper--closed">
+          <div class="footer__column-one footer__menu-wrapper footer__menu-wrapper--closed" data-init="menu">
             <button class="footer__toggle" type="button" aria-label="Раскрыть меню"></button>
             <h2 class="footer__title">Разделы сайта</h2>
             <div class="footer__menu footer__menu--split">
@@ -205,7 +205,7 @@
               </div>
             </div>
           </div>
-          <div class="footer__column-two footer__menu-wrapper">
+          <div class="footer__column-two footer__menu-wrapper" data-init="menu">
             <button class="footer__toggle" type="button" aria-label="Раскрыть меню"></button>
             <h2 class="footer__title">Наш офис</h2>
             <div class="footer__menu">
@@ -232,7 +232,7 @@
     </div>
   </footer>
 
-  <div class="modal modal--hide">
+  <div class="modal modal--hide" data-init="modal">
     <section class="modal-call modal__section modal__section--zoom-in">
       <button class="modal-call__close" type="button" aria-label="Закрыть попап"></button>
       <h2 class="modal-call__title">Закажите звонок</h2>
@@ -245,7 +245,7 @@
           </div>
           <div class="feedback-form__field">
             <label class="visually-hidden" for="modal-phone">Телефон</label>
-            <input type="text" name="phone" id="modal-phone" placeholder="Телефон" required>
+            <input type="text" name="phone" id="modal-phone" placeholder="Телефон" required data-init="mask">
           </div>
           <div class="feedback-form__field">
             <label class="visually-hidden" for="modal-question">Ваш вопрос</label>

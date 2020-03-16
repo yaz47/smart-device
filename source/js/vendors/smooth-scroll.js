@@ -1,5 +1,5 @@
 'use strict';
-
+(function () {
 // polyfill
 function smoothScroll() {
   // aliases
@@ -427,3 +427,4 @@ if (typeof exports === 'object' && typeof module !== 'undefined') {
   // global
   smoothScroll();
 }
+})();

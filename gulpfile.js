@@ -114,8 +114,10 @@ gulp.task("js-vendors", function () {
 gulp.task("js-app", function () {
   return gulp.src([
     "source/js/app/base-component.js",
-    "source/js/app/footer.js",
-    "source/js/app/modal.js",
+    "source/js/app/mask-component.js",
+    "source/js/app/menu-component.js",
+    "source/js/app/modal-component.js",
+    "source/js/app/scroll-component.js",
     "source/js/app/app.js"
   ])
   .pipe(concat("main.js"))

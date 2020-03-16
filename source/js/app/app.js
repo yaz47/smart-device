@@ -1,24 +1,22 @@
 'use strict';
 
-var MASK = '+{7}(000)000-00-00';
+var COMPONENTS_LIST = {
+  'scroll': window.ScrollComponent,
+  'mask': window.MaskComponent,
+  'menu': window.MenuComponent,
+  'modal': window.ModalComponent
+};
 
-var phone = document.querySelector('#phone');
-var modalPhone = document.querySelector('#modal-phone');
-var modal = document.querySelector('.modal');
+var INIT_SELECTOR = '[data-init]';
 
-if (phone) {
-  window.iMaskJS(phone, {mask: MASK});
+var elements = window.BaseComponent.getRefs(document.querySelectorAll(INIT_SELECTOR));
+
+if (elements) {
+  var components = [];
+
+  elements.forEach(function (element) {
+    var component = new COMPONENTS_LIST[element.dataset.init]({element: element});
+    component.init();
+    components.push(component);
+  });
 }
-
-if (modalPhone) {
-  window.iMaskJS(modalPhone, {mask: MASK});
-}
-
-if (modal) {
-  var modalComponent = new window.ModalComponent({element: modal});
-  modalComponent.init();
-}
-
-var footer = new window.FooterComponent();
-
-footer.init();
