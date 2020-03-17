@@ -224,6 +224,10 @@
   @media (min-width: $min-desktop-width) {
     padding-right: 25px;
   }
+
+  & a {
+    @include default-hover-effect();
+  }
 }
 
 .footer__toggle {
@@ -265,6 +269,7 @@
   @media (min-width: $min-desktop-width) {
     &--split {
       display: flex;
+      flex-flow: row wrap;
     }
   }
 

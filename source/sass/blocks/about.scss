@@ -43,44 +43,44 @@
   }
 }
 
-.about__tag {
-  @include font-roboto-regular();
-
-  margin: 20px 0 0;
-
-  color: $color-dodger-blue;
-  font-size: 24px;
-  line-height: 1.406;
-
-  transition: color $default-transition-time $default-transition-func;
-
-  @media (max-width: $max-tablet-width) {
-    margin: 7px 0 0;
-  }
-
-  @media (max-width: $max-mobile-width) {
-    margin: 10px 0 0;
-
-    font-size: 20px;
-  }
-}
-
-.about__text {
-  margin: 15px 0;
-
-  transition: color $default-transition-time $default-transition-func;
-
-  @media (max-width: $max-tablet-width) {
-    margin: 10px 0 0;
-  }
-}
-
 .about__list {
   display: flex;
   flex-flow: row wrap;
 
   @media (max-width: $max-mobile-width) {
     display: block;
+  }
+
+  & h3 {
+    @include font-roboto-regular();
+
+    margin: 20px 0 0;
+
+    color: $color-dodger-blue;
+    font-size: 24px;
+    line-height: 1.406;
+
+    transition: color $default-transition-time $default-transition-func;
+
+    @media (max-width: $max-tablet-width) {
+      margin: 7px 0 0;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      margin: 10px 0 0;
+
+      font-size: 20px;
+    }
+  }
+
+  & p {
+    margin: 15px 0;
+
+    transition: color $default-transition-time $default-transition-func;
+
+    @media (max-width: $max-tablet-width) {
+      margin: 10px 0 0;
+    }
   }
 }
 
@@ -116,8 +116,8 @@
       fill: $color-white;
     }
 
-    & .about__tag,
-    & .about__text {
+    & h3,
+    & p {
       color: $color-white;
     }
   }
@@ -160,27 +160,27 @@
     padding-left: 0;
     background-image: none;
   }
-}
 
-.about__title {
-  @include font-roboto-regular();
+  & h2 {
+    @include font-roboto-regular();
 
-  margin: 10px 0 0;
+    margin: 10px 0 0;
 
-  font-size: 36px;
-  line-height: 1.41;
+    font-size: 36px;
+    line-height: 1.41;
 
-  @media (max-width: $max-tablet-width) {
-    font-size: 32px;
+    @media (max-width: $max-tablet-width) {
+      font-size: 32px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      font-size: 28px;
+    }
   }
 
-  @media (max-width: $max-mobile-width) {
-    font-size: 28px;
+  & p {
+    margin: 20px 0;
   }
-}
-
-.about__desc {
-  margin: 20px 0;
 }
 
 .about__button {
