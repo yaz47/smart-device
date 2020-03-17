@@ -21,7 +21,7 @@
 
   MenuComponent.prototype._setListeners = function () {
     var self = this;
-    var buttons = this._getRefs(document.querySelectorAll(BUTTON_SELECTOR));
+    var buttons = this._getRefs(this.element.querySelectorAll(BUTTON_SELECTOR));
 
     if (buttons) {
       buttons.forEach(function (button) {
