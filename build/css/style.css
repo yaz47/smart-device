@@ -588,7 +588,7 @@ body {
       margin-left: 60px; } }
   @media (max-width: 767px) {
     .intro__wrapper {
-      width: 290px;
+      width: 100%;
       margin-top: 215px;
       margin-left: 0; } }
 
@@ -771,23 +771,25 @@ body {
   .about__item:nth-child(2n+1) {
     margin-right: 30px; }
   @media (min-width: 1024px) {
-    .about__item::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #00b2ff;
-      -webkit-transform: scale(0);
-              transform: scale(0);
-      -webkit-transition: -webkit-transform 0.3s ease;
-      transition: -webkit-transform 0.3s ease;
-      transition: transform 0.3s ease;
-      transition: transform 0.3s ease, -webkit-transform 0.3s ease; } }
+    .about__item {
+      cursor: pointer; }
+      .about__item::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #00b2ff;
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        -webkit-transition: -webkit-transform 0.3s ease;
+        transition: -webkit-transform 0.3s ease;
+        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, -webkit-transform 0.3s ease; } }
   @media (min-width: 1024px) {
     .about__item:hover::before {
       -webkit-transform: scale(1);
@@ -844,6 +846,29 @@ body {
         font-size: 28px; } }
   .about__wrapper p {
     margin: 20px 0; }
+    @media (max-width: 1023px) {
+      .about__wrapper p {
+        position: relative;
+        overflow: hidden;
+        max-height: calc(1.34rem * 4);
+        padding-right: 2rem;
+        line-height: 1.34rem;
+        text-align: justify; }
+        .about__wrapper p::before {
+          content: "...";
+          position: absolute;
+          right: 0;
+          bottom: 0; }
+        .about__wrapper p::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          width: 2rem;
+          height: 1.34rem;
+          background: #ffffff; } }
+    @media (max-width: 767px) {
+      .about__wrapper p {
+        max-height: calc(1.34rem * 8); } }
 
 .about__button {
   min-width: 180px;
@@ -981,6 +1006,10 @@ body {
         background-image: url("../img/card-two-mobile.jpg"); }
       .service__card--three {
         background-image: url("../img/card-three-mobile.jpg"); } }
+
+.service__card-text {
+  display: inline-block;
+  max-width: 170px; }
 
 .feedback {
   min-height: 600px;
@@ -1152,7 +1181,8 @@ body {
     padding-top: 10px;
     padding-left: 35px;
     color: #ffffff;
-    font-size: 14px; }
+    font-size: 14px;
+    cursor: pointer; }
     .feedback-form__field input[type="checkbox"] + label::before {
       content: "";
       position: absolute;
@@ -1420,15 +1450,20 @@ body {
   @media (max-width: 767px) {
     .footer__toggle {
       position: absolute;
-      top: 30px;
-      right: 17px;
+      top: 0;
+      left: 0;
+      z-index: 5;
       display: block;
-      width: 16px;
-      height: 16px;
+      width: 100%;
+      height: 70px;
+      max-height: 100%;
       background-color: transparent; }
       .footer__toggle::before, .footer__toggle::after {
         content: "";
         display: block;
+        position: absolute;
+        top: 30px;
+        right: 17px;
         width: 16px;
         height: 2px;
         background-color: #cdcdcd;
@@ -1436,8 +1471,8 @@ body {
                 transform: translateY(50%); }
       .footer__toggle::after {
         display: none;
-        -webkit-transform: translateY(-1px) rotate(90deg);
-                transform: translateY(-1px) rotate(90deg); } }
+        -webkit-transform: translateY(1px) rotate(90deg);
+                transform: translateY(1px) rotate(90deg); } }
 
 .footer__menu {
   margin-top: 25px;
@@ -1467,6 +1502,8 @@ body {
       padding-bottom: 30px; }
       .footer__menu-wrapper--closed .footer__menu {
         display: none; }
+      .footer__menu-wrapper--closed .footer__toggle {
+        height: 100%; }
       .footer__menu-wrapper--closed .footer__toggle::after {
         display: block; } }
 

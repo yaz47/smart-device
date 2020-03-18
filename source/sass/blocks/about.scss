@@ -105,6 +105,8 @@
   }
 
   @media (min-width: $min-desktop-width) {
+    cursor: pointer;
+
     &::before {
       content: "";
       display: block;
@@ -196,6 +198,36 @@
 
   & p {
     margin: 20px 0;
+
+    @media (max-width: $max-tablet-width) {
+      position: relative;
+      overflow: hidden;
+      max-height: calc(1.34rem * 4);
+      padding-right: 2rem;
+
+      line-height: 1.34rem;
+      text-align: justify;
+
+      &::before {
+        content: "...";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 2rem;
+        height: 1.34rem;
+        background: $color-white;
+      }
+    }
+
+    @media (max-width: $max-mobile-width) {
+      max-height: calc(1.34rem * 8);
+    }
   }
 }
 
