@@ -15,12 +15,14 @@
 
   @media (max-width: $max-tablet-width) {
     padding-top: 54px;
+    padding-bottom: 50px;
     background-position: top 50px right -300px;
     background-image: url("../img/about-tablet.svg");
   }
 
   @media (max-width: $max-mobile-width) {
     padding-top: 37px;
+    padding-bottom: 65px;
   }
 }
 
@@ -152,6 +154,8 @@
   @media (max-width: $max-mobile-width) {
     width: 100%;
     margin-bottom: 20px;
+    padding-right: 15px;
+    line-height: 1.4;
 
     &:nth-child(2n+1) {
       margin-right: 0;
@@ -169,13 +173,18 @@
   background-image: url("../img/2005.jpg");
 
   @media (max-width: $max-tablet-width) {
+    min-height: 360px;
     margin-top: 25px;
+    padding-bottom: 30px;
+    padding-left: 190px;
+    background-size: 200px 360px;
   }
 
   @media (max-width: $max-mobile-width) {
     min-height: 100px;
     margin-top: 60px;
     padding-left: 0;
+    padding-bottom: 0;
     background-image: none;
   }
 
@@ -203,6 +212,7 @@
       position: relative;
       overflow: hidden;
       max-height: calc(1.34rem * 4);
+      margin-top: 25px;
       padding-right: 2rem;
 
       line-height: 1.34rem;
@@ -234,6 +244,7 @@
 .about__button {
   min-width: 180px;
   margin-top: 25px;
+  padding: 13px 25px;
 
   color: $color-dodger-blue;
 

@@ -382,9 +382,9 @@ body {
   position: relative;
   overflow: hidden;
   padding-top: 1px;
-  padding-right: 40px;
+  padding-right: 35px;
   padding-bottom: 1px;
-  padding-left: 40px; }
+  padding-left: 45px; }
   @media (max-width: 1023px) {
     .section-block {
       padding-top: 1px;
@@ -478,6 +478,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media (max-width: 767px) {
+    .header__container {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
 
 .header__logo {
   position: relative;
@@ -493,10 +498,14 @@ body {
     max-width: none;
     width: auto;
     height: 52px; }
+    @media (max-width: 767px) {
+      .header__logo img {
+        width: 38px;
+        height: 38px; } }
   @media (max-width: 767px) {
     .header__logo {
-      width: 52px;
-      height: 52px; } }
+      width: 38px;
+      height: 38px; } }
 
 .header__link {
   -webkit-transition: opacity 0.3s ease;
@@ -522,7 +531,8 @@ body {
       margin-left: 30px; } }
   @media (max-width: 767px) {
     .header__link {
-      margin-left: 20px; } }
+      margin-left: 5px;
+      min-height: 30px; } }
 
 .header__link-icon {
   position: absolute;
@@ -613,7 +623,7 @@ body {
   font-family: "PT Mono", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   position: relative;
   margin: 25px 0;
-  padding-left: 90px;
+  padding-left: 100px;
   font-size: 22px;
   line-height: 1.57; }
   .intro__text::before {
@@ -629,7 +639,6 @@ body {
       font-size: 18px;
       padding-left: 48px; }
       .intro__text::before {
-        top: 15px;
         width: 33px; } }
   @media (max-width: 767px) {
     .intro__text {
@@ -641,7 +650,7 @@ body {
 .intro__button {
   min-width: 407px;
   margin-top: 20px;
-  margin-left: 90px;
+  margin-left: 100px;
   padding-top: 17px;
   padding-bottom: 17px;
   font-size: 16px;
@@ -666,7 +675,7 @@ body {
   font-family: "PT Mono", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   position: absolute;
   bottom: -150px;
-  left: 0;
+  left: 10px;
   font-size: 14px;
   -webkit-transform: translateX(-50%) rotate(-90deg);
           transform: translateX(-50%) rotate(-90deg); }
@@ -695,11 +704,13 @@ body {
   @media (max-width: 1023px) {
     .about {
       padding-top: 54px;
+      padding-bottom: 50px;
       background-position: top 50px right -300px;
       background-image: url("../img/about-tablet.svg"); } }
   @media (max-width: 767px) {
     .about {
-      padding-top: 37px; } }
+      padding-top: 37px;
+      padding-bottom: 65px; } }
 
 .about__container {
   max-width: 1170px; }
@@ -811,7 +822,9 @@ body {
   @media (max-width: 767px) {
     .about__item {
       width: 100%;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      padding-right: 15px;
+      line-height: 1.4; }
       .about__item:nth-child(2n+1) {
         margin-right: 0; } }
 
@@ -824,12 +837,17 @@ body {
   background-image: url("../img/2005.jpg"); }
   @media (max-width: 1023px) {
     .about__wrapper {
-      margin-top: 25px; } }
+      min-height: 360px;
+      margin-top: 25px;
+      padding-bottom: 30px;
+      padding-left: 190px;
+      background-size: 200px 360px; } }
   @media (max-width: 767px) {
     .about__wrapper {
       min-height: 100px;
       margin-top: 60px;
       padding-left: 0;
+      padding-bottom: 0;
       background-image: none; } }
   .about__wrapper h2 {
     font-style: normal;
@@ -851,6 +869,7 @@ body {
         position: relative;
         overflow: hidden;
         max-height: calc(1.34rem * 4);
+        margin-top: 25px;
         padding-right: 2rem;
         line-height: 1.34rem;
         text-align: justify; }
@@ -873,23 +892,24 @@ body {
 .about__button {
   min-width: 180px;
   margin-top: 25px;
+  padding: 13px 25px;
   color: #00b2ff;
   border-color: #00b2ff; }
 
 .service {
   min-height: 300px;
   padding-top: 90px;
-  padding-bottom: 125px;
+  padding-bottom: 130px;
   color: #ffffff;
   background-color: #1b2d37; }
   @media (max-width: 1023px) {
     .service {
-      padding-top: 53px;
-      padding-bottom: 70px; } }
+      padding-top: 50px;
+      padding-bottom: 77px; } }
   @media (max-width: 767px) {
     .service {
       padding-top: 53px;
-      padding-bottom: 65px; } }
+      padding-bottom: 63px; } }
 
 .service__container {
   max-width: 1170px; }
@@ -907,7 +927,8 @@ body {
       font-size: 32px; } }
   @media (max-width: 767px) {
     .service__title {
-      font-size: 28px; } }
+      font-size: 28px;
+      padding: 0 7px; } }
 
 .service__list {
   display: -webkit-box;
@@ -920,20 +941,22 @@ body {
   margin: 50px 0 0; }
   @media (max-width: 1023px) {
     .service__list {
-      display: block; } }
-  @media (max-width: 1023px) {
+      display: block;
+      margin: 50px 0 0; } }
+  @media (max-width: 767px) {
     .service__list {
       margin: 40px 0 0; } }
 
 .service__item {
-  width: calc(100% / 3);
-  padding-right: 30px;
-  padding-bottom: 30px; }
+  width: calc(100% / 3 - 20px); }
+  @media (min-width: 1024px) {
+    .service__item {
+      margin-left: 30px; }
+      .service__item:nth-child(3n + 1) {
+        margin-left: 0; } }
   @media (max-width: 1023px) {
     .service__item {
-      width: 100%;
-      padding-right: 0;
-      padding-bottom: 0; }
+      width: 100%; }
       .service__item + .service__item {
         margin-top: 46px; } }
   @media (max-width: 767px) {
@@ -990,7 +1013,7 @@ body {
   @media (max-width: 1023px) {
     .service__card {
       min-height: 256px;
-      padding: 43px 65px 65px 45px; }
+      padding: 38px 65px 65px 45px; }
       .service__card--one {
         background-image: url("../img/card-one-tablet.jpg"); }
       .service__card--two {
@@ -999,7 +1022,7 @@ body {
         background-image: url("../img/card-three-tablet.jpg"); } }
   @media (max-width: 767px) {
     .service__card {
-      padding: 25px 65px 65px 35px; }
+      padding: 20px 65px 65px 35px; }
       .service__card--one {
         background-image: url("../img/card-one-mobile.jpg"); }
       .service__card--two {
@@ -1013,17 +1036,17 @@ body {
 
 .feedback {
   min-height: 600px;
-  padding-top: 95px;
-  padding-bottom: 55px;
+  padding-top: 90px;
+  padding-bottom: 52px;
   color: #ffffff;
   background-repeat: no-repeat;
-  background-position: top -55px left calc(50% - 415px);
+  background-position: top -60px left calc(50% - 425px);
   background-image: url("../img/feedback-desktop.jpg");
   background-color: #00b2ff; }
   @media (max-width: 1023px) {
     .feedback {
       padding-top: 80px;
-      padding-bottom: 70px;
+      padding-bottom: 43px;
       background-image: none; } }
   @media (max-width: 767px) {
     .feedback {
@@ -1038,6 +1061,7 @@ body {
   margin-left: auto; }
   @media (max-width: 1023px) {
     .feedback__column {
+      max-width: 590px;
       margin-right: auto; } }
   @media (max-width: 767px) {
     .feedback__column {
@@ -1063,24 +1087,33 @@ body {
   font-style: normal;
   font-weight: 400;
   font-family: "PT Mono", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  margin: 7px 0 0;
+  margin: 12px 0 0;
   color: #ffffff;
   font-size: 16px;
   line-height: 1.34; }
+  @media (max-width: 1023px) {
+    .feedback__text {
+      margin: 17px 0 0; } }
+  @media (max-width: 767px) {
+    .feedback__text {
+      margin: 15px 0 0; } }
 
 .feedback__form-wrapper {
-  padding-top: 55px;
+  padding-top: 50px;
   padding-bottom: 20px; }
+  @media (max-width: 1023px) {
+    .feedback__form-wrapper {
+      padding-top: 55px; } }
   @media (max-width: 767px) {
     .feedback__form-wrapper {
-      padding-top: 30px;
+      padding-top: 26px;
       padding-bottom: 0; } }
 
 .feedback-form__field {
   margin-bottom: 40px; }
   @media (max-width: 767px) {
     .feedback-form__field {
-      margin-bottom: 30px; } }
+      margin-bottom: 31px; } }
   .feedback-form__field input[type="text"],
   .feedback-form__field textarea {
     font-style: normal;
@@ -1102,6 +1135,10 @@ body {
     resize: none;
     -webkit-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease; }
+    @media (max-width: 767px) {
+      .feedback-form__field input[type="text"],
+      .feedback-form__field textarea {
+        padding: 15px 16px; } }
     .feedback-form__field input[type="text"]::-webkit-input-placeholder,
     .feedback-form__field textarea::-webkit-input-placeholder {
       font: inherit;
@@ -1129,6 +1166,9 @@ body {
       color: #00b2ff; }
   .feedback-form__field textarea {
     min-height: 154px; }
+    @media (max-width: 1023px) {
+      .feedback-form__field textarea {
+        min-height: 162px; } }
     @media (max-width: 767px) {
       .feedback-form__field textarea {
         min-height: 104px; } }
@@ -1158,6 +1198,7 @@ body {
     min-height: 45px;
     min-width: 100px;
     width: 100%;
+    margin-top: 5px;
     padding: 14px 25px;
     text-align: center;
     vertical-align: middle;
@@ -1178,20 +1219,27 @@ body {
     font-family: "PT Mono", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     position: relative;
     display: block;
-    padding-top: 10px;
-    padding-left: 35px;
+    padding-top: 13px;
+    padding-left: 45px;
     color: #ffffff;
     font-size: 14px;
     cursor: pointer; }
     .feedback-form__field input[type="checkbox"] + label::before {
       content: "";
       position: absolute;
-      top: 10px;
-      left: 0;
+      top: 15px;
+      left: 10px;
       width: 17px;
       height: 16px;
       border: 1px solid #ffffff;
       cursor: pointer; }
+    @media (max-width: 767px) {
+      .feedback-form__field input[type="checkbox"] + label {
+        padding-top: 0;
+        padding-left: 35px; }
+        .feedback-form__field input[type="checkbox"] + label::before {
+          top: 0;
+          left: 0; } }
   .feedback-form__field input[type="checkbox"]:checked + label::before {
     background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
@@ -1240,10 +1288,10 @@ body {
   .footer__row {
     position: relative;
     overflow: hidden;
-    padding-top: 1px;
-    padding-right: 40px;
-    padding-bottom: 1px;
-    padding-left: 40px; }
+    padding-top: 0.1px;
+    padding-right: 35px;
+    padding-bottom: 2px;
+    padding-left: 45px; }
     .footer__row--border-top {
       border-top: 1px solid #cdcdcd; } }
 
@@ -1272,7 +1320,7 @@ body {
       width: 100%;
       padding-right: 24px;
       padding-left: 24px;
-      margin-bottom: 25px; } }
+      margin-bottom: 23px; } }
   @media (max-width: 767px) {
     .footer__block-one {
       display: block;
@@ -1292,6 +1340,9 @@ body {
   text-transform: uppercase;
   max-width: 300px;
   margin: 13px 0 0; }
+  @media (max-width: 1023px) {
+    .footer__tag {
+      margin: 15px 0 0; } }
   @media (max-width: 767px) {
     .footer__tag {
       margin-top: 25px;
@@ -1314,7 +1365,7 @@ body {
   @media (max-width: 1023px) {
     .footer__social-list {
       max-width: 150px;
-      margin-top: 10px;
+      margin-top: 12px;
       margin-left: auto; } }
   @media (max-width: 767px) {
     .footer__social-list {
@@ -1324,11 +1375,17 @@ body {
       max-width: 250px;
       margin-top: 35px;
       margin-right: auto;
+      padding-right: 15px;
       margin-left: auto; } }
 
 .footer__social-item {
   padding-right: 15px;
   padding-bottom: 15px; }
+  @media (max-width: 1023px) {
+    .footer__social-item {
+      padding-right: 0;
+      padding-left: 15px;
+      padding-bottom: 15px; } }
 
 .footer__social-button {
   -webkit-transition: opacity 0.3s ease;
@@ -1364,10 +1421,10 @@ body {
 
 .footer__column-one {
   position: relative;
-  width: 63%; }
+  width: 65%; }
   @media (max-width: 1023px) {
     .footer__column-one {
-      width: 50%; } }
+      width: 52%; } }
   @media (max-width: 767px) {
     .footer__column-one {
       width: 100%;
@@ -1377,10 +1434,10 @@ body {
 
 .footer__column-two {
   position: relative;
-  width: 37%; }
+  width: 35%; }
   @media (max-width: 1023px) {
     .footer__column-two {
-      width: 50%; } }
+      width: 48%; } }
   @media (max-width: 767px) {
     .footer__column-two {
       width: 100%;
@@ -1419,9 +1476,6 @@ body {
 
 .footer__address {
   font-style: normal; }
-  @media (min-width: 1024px) {
-    .footer__address {
-      padding-right: 25px; } }
   .footer__address a {
     -webkit-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease; }
@@ -1462,7 +1516,7 @@ body {
         content: "";
         display: block;
         position: absolute;
-        top: 30px;
+        top: 34px;
         right: 17px;
         width: 16px;
         height: 2px;
@@ -1488,7 +1542,7 @@ body {
               flex-flow: row wrap; } }
   @media (max-width: 1023px) {
     .footer__menu {
-      margin-bottom: 35px; } }
+      margin-bottom: 37px; } }
   @media (max-width: 767px) {
     .footer__menu {
       margin-top: 30px;
@@ -1499,7 +1553,7 @@ body {
     padding-top: 30px;
     padding-right: 40px; }
     .footer__menu-wrapper--closed {
-      padding-bottom: 30px; }
+      padding-bottom: 28px; }
       .footer__menu-wrapper--closed .footer__menu {
         display: none; }
       .footer__menu-wrapper--closed .footer__toggle {
@@ -1618,7 +1672,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 10vh 14px 14px;
+  padding: 14.5vh 14px 14px;
   background-color: rgba(0, 0, 0, 0.9); }
   .modal--hide {
     display: none; }
@@ -1640,7 +1694,7 @@ body {
   max-width: 490px;
   margin-right: auto;
   margin-left: auto;
-  padding: 35px 40px;
+  padding: 30px 40px 7px;
   color: #ffffff;
   background-color: #00b2ff; }
 
@@ -1681,6 +1735,17 @@ body {
 
 .modal-call__form-wrapper {
   padding-top: 25px; }
+  .modal-call__form-wrapper .field {
+    margin-bottom: 32px; }
+  .modal-call__form-wrapper textarea {
+    min-height: 105px; }
+  .modal-call__form-wrapper input[type="checkbox"] + label {
+    padding-top: 0;
+    padding-left: 45px;
+    padding-right: 10px; }
+    .modal-call__form-wrapper input[type="checkbox"] + label::before {
+      top: 0;
+      left: 0; }
 
 .modal-call__title {
   font-style: normal;
@@ -1691,6 +1756,6 @@ body {
   line-height: 1.41; }
 
 .modal-call__text {
-  margin: 7px 0 0;
+  margin: 12px 0 10px;
   font-size: 16px;
   line-height: 1.34; }

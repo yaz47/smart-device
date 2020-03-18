@@ -1,18 +1,18 @@
 .feedback {
   min-height: 600px;
-  padding-top: 95px;
-  padding-bottom: 55px;
+  padding-top: 90px;
+  padding-bottom: 52px;
 
   color: $color-white;
 
   background-repeat: no-repeat;
-  background-position: top -55px left calc(50% - 415px);
+  background-position: top -60px left calc(50% - 425px);
   background-image: url("../img/feedback-desktop.jpg");
   background-color: $color-dodger-blue;
 
   @media (max-width: $max-tablet-width) {
     padding-top: 80px;
-    padding-bottom: 70px;
+    padding-bottom: 43px;
     background-image: none;
   }
 
@@ -31,6 +31,7 @@
   margin-left: auto;
 
   @media (max-width: $max-tablet-width) {
+    max-width: 590px;
     margin-right: auto;
   }
 
@@ -61,19 +62,31 @@
 .feedback__text {
   @include font-pt();
 
-  margin: 7px 0 0;
+  margin: 12px 0 0;
 
   color: $color-white;
   font-size: 16px;
   line-height: 1.34;
+
+  @media (max-width: $max-tablet-width) {
+    margin: 17px 0 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin: 15px 0 0;
+  }
 }
 
 .feedback__form-wrapper {
-  padding-top: 55px;
+  padding-top: 50px;
   padding-bottom: 20px;
 
+  @media (max-width: $max-tablet-width) {
+    padding-top: 55px;
+  }
+
   @media (max-width: $max-mobile-width) {
-    padding-top: 30px;
+    padding-top: 26px;
     padding-bottom: 0;
   }
 }
@@ -82,7 +95,7 @@
   margin-bottom: 40px;
 
   @media (max-width: $max-mobile-width) {
-    margin-bottom: 30px;
+    margin-bottom: 31px;
   }
 
   & input[type="text"],
@@ -104,6 +117,10 @@
     resize: none;
     transition: background-color $default-transition-time $default-transition-func;
 
+    @media (max-width: $max-mobile-width) {
+      padding: 15px 16px;
+    }
+
     &::placeholder {
       font: inherit;
       color: $color-white;
@@ -118,6 +135,10 @@
 
   & textarea {
     min-height: 154px;
+
+    @media (max-width: $max-tablet-width) {
+      min-height: 162px;
+    }
 
     @media (max-width: $max-mobile-width) {
       min-height: 104px;
@@ -135,6 +156,7 @@
     min-height: 45px;
     min-width: 100px;
     width: 100%;
+    margin-top: 5px;
     padding: 14px 25px;
 
     text-align: center;
@@ -153,8 +175,8 @@
 
     position: relative;
     display: block;
-    padding-top: 10px;
-    padding-left: 35px;
+    padding-top: 13px;
+    padding-left: 45px;
 
     color: $color-white;
     font-size: 14px;
@@ -164,13 +186,23 @@
     &::before {
       content: "";
       position: absolute;
-      top: 10px;
-      left: 0;
+      top: 15px;
+      left: 10px;
       width: 17px;
       height: 16px;
 
       border: 1px solid $color-white;
       cursor: pointer;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      padding-top: 0;
+      padding-left: 35px;
+
+      &::before {
+        top: 0;
+        left: 0;
+      }
     }
   }
 

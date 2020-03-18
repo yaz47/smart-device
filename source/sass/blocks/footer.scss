@@ -26,10 +26,10 @@
   @media (min-width: $min-desktop-width) {
     position: relative;
     overflow: hidden;
-    padding-top: 1px;
-    padding-right: 40px;
-    padding-bottom: 1px;
-    padding-left: 40px;
+    padding-top: 0.1px;
+    padding-right: 35px;
+    padding-bottom: 2px;
+    padding-left: 45px;
 
     &--border-top {
       border-top: 1px solid $color-silver;
@@ -63,7 +63,7 @@
     width: 100%;
     padding-right: 24px;
     padding-left: 24px;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 
   @media (max-width: $max-mobile-width) {
@@ -89,6 +89,10 @@
   max-width: 300px;
   margin: 13px 0 0;
 
+  @media (max-width: $max-tablet-width) {
+    margin: 15px 0 0;
+  }
+
   @media (max-width: $max-mobile-width) {
     margin-top: 25px;
     margin-right: auto;
@@ -105,7 +109,7 @@
 
   @media (max-width: $max-tablet-width) {
     max-width: 150px;
-    margin-top: 10px;
+    margin-top: 12px;
     margin-left: auto;
   }
 
@@ -114,6 +118,7 @@
     max-width: 250px;
     margin-top: 35px;
     margin-right: auto;
+    padding-right: 15px;
     margin-left: auto;
   }
 }
@@ -121,6 +126,12 @@
 .footer__social-item {
   padding-right: 15px;
   padding-bottom: 15px;
+
+  @media (max-width: $max-tablet-width) {
+    padding-right: 0;
+    padding-left: 15px;
+    padding-bottom: 15px;
+  }
 }
 
 .footer__social-button {
@@ -156,10 +167,10 @@
 
 .footer__column-one {
   position: relative;
-  width: 63%;
+  width: 65%;
 
   @media (max-width: $max-tablet-width) {
-    width: 50%;
+    width: 52%;
   }
 
   @media (max-width: $max-mobile-width) {
@@ -173,10 +184,10 @@
 
 .footer__column-two {
   position: relative;
-  width: 37%;
+  width: 35%;
 
   @media (max-width: $max-tablet-width) {
-    width: 50%;
+    width: 48%;
   }
 
   @media (max-width: $max-mobile-width) {
@@ -221,10 +232,6 @@
 .footer__address {
   font-style: normal;
 
-  @media (min-width: $min-desktop-width) {
-    padding-right: 25px;
-  }
-
   & a {
     @include default-hover-effect();
   }
@@ -252,7 +259,7 @@
       content: "";
       display: block;
       position: absolute;
-      top: 30px;
+      top: 34px;
       right: 17px;
       width: 16px;
       height: 2px;
@@ -279,7 +286,7 @@
   }
 
   @media (max-width: $max-tablet-width) {
-    margin-bottom: 35px;
+    margin-bottom: 37px;
   }
 
   @media (max-width: $max-mobile-width) {
@@ -294,7 +301,7 @@
     padding-right: 40px;
 
     &--closed {
-      padding-bottom: 30px;
+      padding-bottom: 28px;
 
       & .footer__menu {
         display: none;

@@ -31,7 +31,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 10vh 14px 14px;
+  padding: 14.5vh 14px 14px;
 
   background-color: rgba($color-black, 0.9);
 
@@ -58,7 +58,7 @@
   max-width: 490px;
   margin-right: auto;
   margin-left: auto;
-  padding: 35px 40px;
+  padding: 30px 40px 7px;
 
   color: $color-white;
 
@@ -93,6 +93,25 @@
 
 .modal-call__form-wrapper {
   padding-top: 25px;
+
+  & .field {
+    margin-bottom: 32px;
+  }
+
+  & textarea {
+    min-height: 105px;
+  }
+
+  & input[type="checkbox"] + label {
+    padding-top: 0;
+    padding-left: 45px;
+    padding-right: 10px;
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+  }
 }
 
 .modal-call__title {
@@ -105,7 +124,7 @@
 }
 
 .modal-call__text {
-  margin: 7px 0 0;
+  margin: 12px 0 10px;
 
   font-size: 16px;
   line-height: 1.34;

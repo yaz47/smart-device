@@ -1,20 +1,20 @@
 .service {
   min-height: 300px;
   padding-top: 90px;
-  padding-bottom: 125px;
+  padding-bottom: 130px;
 
   color: $color-white;
 
   background-color: $color-gable-green;
 
   @media (max-width: $max-tablet-width) {
-    padding-top: 53px;
-    padding-bottom: 70px;
+    padding-top: 50px;
+    padding-bottom: 77px;
   }
 
   @media (max-width: $max-mobile-width) {
     padding-top: 53px;
-    padding-bottom: 65px;
+    padding-bottom: 63px;
   }
 }
 
@@ -37,6 +37,7 @@
 
   @media (max-width: $max-mobile-width) {
     font-size: 28px;
+    padding: 0 7px;
   }
 }
 
@@ -47,23 +48,27 @@
 
   @media (max-width: $max-tablet-width) {
     display: block;
+    margin: 50px 0 0;
   }
 
-  @media (max-width: $max-tablet-width) {
+  @media (max-width: $max-mobile-width) {
     margin: 40px 0 0;
   }
 }
 
 .service__item {
-  width: calc(100% / 3);
+  width: calc(100% / 3 - 20px);
 
-  padding-right: 30px;
-  padding-bottom: 30px;
+  @media (min-width: $min-desktop-width) {
+    margin-left: 30px;
+
+    &:nth-child(3n + 1) {
+      margin-left: 0;
+    }
+  }
 
   @media (max-width: $max-tablet-width) {
     width: 100%;
-    padding-right: 0;
-    padding-bottom: 0;
 
     & + & {
       margin-top: 46px;
@@ -133,7 +138,7 @@
 
   @media (max-width: $max-tablet-width) {
     min-height: 256px;
-    padding: 43px 65px 65px 45px;
+    padding: 38px 65px 65px 45px;
 
     &--one {
       background-image: url("../img/card-one-tablet.jpg");
@@ -149,7 +154,7 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    padding: 25px 65px 65px 35px;
+    padding: 20px 65px 65px 35px;
 
     &--one {
       background-image: url("../img/card-one-mobile.jpg");

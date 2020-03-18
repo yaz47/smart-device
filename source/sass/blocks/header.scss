@@ -29,6 +29,10 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+
+  @media (max-width: $max-mobile-width) {
+    align-items: flex-start;
+  }
 }
 
 .header__logo {
@@ -46,11 +50,16 @@
     max-width: none;
     width: auto;
     height: 52px;
+
+    @media (max-width: $max-mobile-width) {
+      width: 38px;
+      height: 38px;
+    }
   }
 
   @media (max-width: $max-mobile-width) {
-    width: 52px;
-    height: 52px;
+    width: 38px;
+    height: 38px;
   }
 }
 
@@ -74,7 +83,8 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    margin-left: 20px;
+    margin-left: 5px;
+    min-height: 30px;
   }
 }
 
