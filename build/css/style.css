@@ -688,6 +688,16 @@ body {
     .intro__scroll {
       display: none; } }
 
+@media (max-width: 767px) {
+  .intro__button-text-desktop {
+    display: none; } }
+
+.intro__button-text-mobile {
+  display: none; }
+  @media (max-width: 767px) {
+    .intro__button-text-mobile {
+      display: inline; } }
+
 .about {
   font-style: normal;
   font-weight: 400;

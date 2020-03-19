@@ -57,7 +57,10 @@
         <div class="intro__wrapper">
           <h2 class="intro__title">Печатные платы</h2>
           <p class="intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a class="intro__button button" href="#feedback" data-init="scroll" data-scroll-id="feedback">Получить бесплатную консультацию</a>
+          <a class="intro__button button" href="#feedback" data-init="scroll" data-scroll-id="feedback">
+            <span class="intro__button-text-desktop">Получить бесплатную консультацию</span>
+            <span class="intro__button-text-mobile">Бесплатная консультация</span>
+          </a>
         </div>
         <a href="#advantages" class="intro__scroll" data-init="scroll" data-scroll-id="advantages">Скролл вниз</a>
       </div>
@@ -138,7 +141,7 @@
                 </div>
                 <div class="feedback-form__field">
                   <label class="visually-hidden" for="phone">Телефон</label>
-                  <input type="text" name="phone" id="phone" placeholder="Телефон" required="" data-init="mask">
+                  <input type="text" name="phone" id="phone" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" title="Введите телефон по форме +7(000)000-00-00" placeholder="Телефон" required="" data-init="mask">
                 </div>
               </div>
               <div class="feedback-form__field">
@@ -254,7 +257,7 @@
           </div>
           <div class="feedback-form__field field">
             <label class="visually-hidden" for="modal-phone">Телефон</label>
-            <input type="text" name="phone" id="modal-phone" placeholder="Телефон" required="" data-init="mask">
+            <input type="text" name="phone" id="modal-phone" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" title="Введите телефон по форме +7(000)000-00-00" placeholder="Телефон" required="" data-init="mask">
           </div>
           <div class="feedback-form__field field">
             <label class="visually-hidden" for="modal-question">Ваш вопрос</label>

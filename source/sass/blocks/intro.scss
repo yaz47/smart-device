@@ -146,3 +146,17 @@
     display: none;
   }
 }
+
+.intro__button-text-desktop {
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+}
+
+.intro__button-text-mobile {
+  display: none;
+
+  @media (max-width: $max-mobile-width) {
+    display: inline;
+  }
+}
