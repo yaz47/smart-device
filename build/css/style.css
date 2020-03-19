@@ -876,28 +876,15 @@ body {
     margin: 20px 0; }
     @media (max-width: 1023px) {
       .about__wrapper p {
-        position: relative;
-        overflow: hidden;
-        max-height: calc(1.34rem * 4);
-        margin-top: 25px;
-        padding-right: 2rem;
-        line-height: 1.34rem;
-        text-align: justify; }
-        .about__wrapper p::before {
-          content: "...";
-          position: absolute;
-          right: 0;
-          bottom: 0; }
-        .about__wrapper p::after {
-          content: "";
-          position: absolute;
-          right: 0;
-          width: 2rem;
-          height: 1.34rem;
-          background: #ffffff; } }
-    @media (max-width: 767px) {
-      .about__wrapper p {
-        max-height: calc(1.34rem * 8); } }
+        margin-top: 25px; } }
+  .about__wrapper .ellipsis {
+    display: none; }
+    @media (max-width: 1023px) {
+      .about__wrapper .ellipsis {
+        display: inline; } }
+  @media (max-width: 1023px) {
+    .about__wrapper .more {
+      display: none; } }
 
 .about__button {
   min-width: 180px;
